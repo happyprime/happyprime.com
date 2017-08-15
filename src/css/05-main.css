@@ -1,14 +1,3 @@
-/*
-Theme Name: Happy Prime Web
-Theme URI: https://happyprimeweb.com/
-Author: jeremyfelt, slocker
-Author URI: https://happyprimeweb.com/
-Description: The theme for happyprimeweb.com
-Template: twentyseventeen
-Version: 0.0.1
-License: GNU General Public License v2 or later
-*/
-
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400i|Raleway:300,600,900);
 
 body {
@@ -53,16 +42,9 @@ input {
 /* --- element design --- */
 .site-header {
 	background: #f9e000;
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	    -ms-flex-direction: column;
-	        flex-direction: column;
-	-webkit-box-align: center;
-	    -ms-flex-align: center;
-	        align-items: center;
+	flex-direction: column;
+	align-items: center;
 	min-height: 40vh;
 }
 
@@ -162,4 +144,3 @@ input {
 .entry-header {
 	display: none;
 }
-/*# sourceMappingURL=style.css.map */
