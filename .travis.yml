@@ -4,7 +4,7 @@ language: php
 env:
   global:
     - HP_KEY_FILE="deploy_rsa"
-    - HP_BUILD_DIR="happyprime"
+    - HP_BUILD_DIR="happyprime/"
 
 addons:
   ssh_known_hosts: 23.239.25.212
