@@ -3,7 +3,7 @@ language: php
 
 env:
   global:
-    - HP_KEY_FILE="hp_deploy_rsa"
+    - HP_KEY_FILE="deploy_rsa"
     - HP_BUILD_DIR=""
 
 addons:
