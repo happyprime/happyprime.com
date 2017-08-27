@@ -3,8 +3,8 @@ language: php
 
 env:
   global:
-    - HP_KEY_FILE="hp_deploy_rsa"
-    - HP_BUILD_DIR=""
+    - HP_KEY_FILE="deploy_rsa"
+    - HP_BUILD_DIR="happyprime/"
 
 addons:
   ssh_known_hosts: 23.239.25.212
@@ -18,10 +18,6 @@ notifications:
   email:
     on_success: never
     on_failure: change
-
-branches:
-  only:
-    - master
 
 matrix:
   include:
@@ -41,7 +37,7 @@ script:
   - make build
 
 before_deploy:
-  - openssl aes-256-cbc -K $encrypted_d52879560fb1_key -iv $encrypted_d52879560fb1_iv -in deploy_rsa.enc -out deploy_rsa -d
+  - openssl aes-256-cbc -K $encrypted_d52879560fb1_key -iv $encrypted_d52879560fb1_iv -in deploy_rsa.enc -out /tmp/deploy_rsa -d
   - eval "$(ssh-agent -s)"
   - chmod 600 /tmp/$HP_KEY_FILE
   - ssh-add /tmp/$HP_KEY_FILE
