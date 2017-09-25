@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400i|Raleway:300,600,900);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700|Raleway:300,600,900);
 
 body {
 	color: #3f3f3f;
@@ -116,8 +116,13 @@ input {
 	border-bottom: 1px solid #f9e000;
 	font-size: .9rem;
 	letter-spacing: 2px;
-	margin-bottom: 10rem;
+	margin-bottom: 6rem;
 	padding-bottom: 2rem;
+}
+
+#about-section {
+	margin-bottom: 5rem;
+	padding: 0 2rem;
 }
 
 @media screen and (max-width: 30em) {
@@ -135,14 +140,9 @@ input {
 
 #services-section,
 #contact-section {
-	padding-right: 2rem;
-	padding-left: 2rem;
-}
-
-#contact-section {
 	border-top: 1px solid #f9e000;
-	padding-top: 3rem;
 	margin-top: 6rem;
+	padding: 6rem 2rem 0;
 }
 
 /* display overwrites */
