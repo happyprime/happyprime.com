@@ -2,17 +2,27 @@
 
 namespace HappyPrime\Theme;
 
-add_action( 'wp_enqueue_scripts', 'HappyPrime\Theme\enqueue_styles' );
+add_action( 'wp_enqueue_scripts', 'HappyPrime\Theme\enqueue_styles', 9 );
+add_action( 'wp_enqueue_scripts', 'HappyPrime\Theme\dequeue_parent_fonts', 11 );
 add_action( 'init', 'HappyPrime\Theme\add_shortcode' );
 add_action( 'wp_footer', 'HappyPrime\Theme\analytics_footer' );
 
 /**
- * Enqueue the default styles provided by the parent theme.
+ * Enqueue additional stylesheets, including the default stylesheet provided
+ * by the parent theme.
  *
  * @since 0.0.1
  */
 function enqueue_styles() {
 	wp_enqueue_style( 'parent-css', get_template_directory_uri() .'/style.css' );
+	wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700|Raleway:300,600,900' );
+}
+
+/**
+ * De-queue the fonts provided by the parent theme.
+ */
+function dequeue_parent_fonts() {
+	wp_dequeue_style( 'twentyseventeen-fonts' );
 }
 
 /**
