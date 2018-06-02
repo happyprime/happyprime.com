@@ -79,7 +79,7 @@ module.exports = function( grunt ) {
 		connect: {
 			server: {
 				options: {
-					open: "http://localhost:8000/src/html/",
+					open: "http://localhost:8000/style-guide/",
 					port: 8000,
 					hostname: "localhost"
 				}
