@@ -1,7 +1,7 @@
 /*
 Theme Name: Happy Prime Web
 Theme URI: https://happyprimeweb.com/
-Author: jeremyfelt, slocker
+Author: jeremyfelt, slocker3
 Author URI: https://happyprimeweb.com/
 Description: The theme for happyprimeweb.com
 Template: twentyseventeen
@@ -12,6 +12,7 @@ License: GNU General Public License v2 or later
 body {
 	color: #3f3f3f;
 	font-family: "Open Sans", sans-serif;
+	line-height: 1.65;
 }
 
 h1,
@@ -21,56 +22,84 @@ h3,
 	color: #3f3f3f;
 	font-family: Raleway, sans-serif;
 	font-weight: 600;
+	line-height: 1.15;
 }
 
-.site-header h1 {
+.site-title {
+	font-family: Raleway, sans-serif;
+	font-size: 1.875rem;
 	font-weight: 300;
-	letter-spacing: 4px;
-	margin: 1rem 0 0 1rem;
+	letter-spacing: 0;
+	margin: .25em 0 0 .5em;
 	text-transform: none;
-}
-
-h2 {
-	font-size: 2rem;
-	text-transform: uppercase;
 }
 
 ul,
 ol {
-	padding-left: 2rem;
+	padding-left: 2em;
 }
 
 label {
 	color: #3f3f3f;
-	margin: 2.5rem 0;
+	margin: 2.5em 0;
 }
 
 input {
-	margin-top: .5rem;
+	margin-top: .5em;
 }
 
 /* --- element design --- */
 .site-header {
 	background: #f9e000;
+	height: 101px;
+}
+
+.home .site-header {
+	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	-ms-flex-direction: column;
-	    flex-direction: column;
-	-ms-flex-align: center;
-	    align-items: center;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	height: auto;
 	min-height: 50vh;
+	padding-bottom: 2em;
 }
 
 #masthead .wrap {
+	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	-ms-flex-align: center;
-	    align-items: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	max-width: 675px;
+	padding: 0;
+}
+
+#content #primary.content-area {
+	max-width: 675px;
+	margin: 0 auto;
 }
 
 .site-branding {
-	padding: 2rem 0 3rem;
+	margin-top: -12px;
+	padding: 0;
+}
+
+.home .site-branding {
+	padding: 2em 0 3em;
 	text-align: center;
+}
+
+.site-branding svg {
+	height: 125px;
+	width: 125px;
+	margin-left: -62px;
 }
 
 .custom-header {
@@ -80,27 +109,31 @@ input {
 @media screen and (max-width: 30em) {
 
 	.custom-logo-link img {
-		margin-bottom: 1rem;
+		margin-bottom: 1em;
 	}
 
 	.site-title {
-		font-size: 2rem;
-	}
-}
-
-@media screen and (min-width: 30em) {
-
-	.custom-header {
-		margin-left: -50px;
+		font-size: 2em;
 	}
 }
 
 .custom-logo-link {
-	padding-right: 1rem;
+	padding-right: 1em;
 }
 
 .panel-content .wrap {
 	padding-top: 0;
+}
+
+.site-content {
+	padding-top: 5rem;
+}
+
+.home h2 {
+	background: #f9e000;
+	display: inline-block;
+	padding: .5rem 2rem .35rem;
+	margin-left: -2rem;
 }
 
 /* - section: header/about - */
@@ -113,41 +146,41 @@ input {
 }
 
 .what-we-do {
-	font-size: 3rem;
+	font-size: 3em;
 	font-weight: 900;
 	line-height: 1;
-	padding: 4rem 0 1rem;
+	padding: 6rem 0;
 	min-height: 50vh;
 }
 
 .why-we-do {
 	border-top: 1px solid #f9e000;
-	font-size: 2rem;
-	padding: 2rem 0 1rem;
+	font-size: 2em;
+	padding: 1.5rem 0 .5rem;
 }
 
 .who-we-are {
 	border-bottom: 1px solid #f9e000;
-	font-size: .9rem;
+	font-size: .9em;
 	letter-spacing: 2px;
-	margin-bottom: 6rem;
-	padding-bottom: 2rem;
+	margin-bottom: 6em;
+	padding-bottom: 2em;
 }
 
 #about-section {
-	margin-bottom: 5rem;
-	padding: 0 2rem;
+	margin-bottom: 5em;
+	padding: 0 2em;
 }
 
 @media screen and (max-width: 30em) {
 
 	.what-we-do {
-		font-size: 1.75rem;
+		font-size: 1.75em;
 		line-height: 1.2;
 	}
 
 	.why-we-do {
-		font-size: 1.5rem;
+		font-size: 1.5em;
 	}
 
 }
@@ -155,13 +188,79 @@ input {
 #services-section,
 #contact-section {
 	border-top: 1px solid #f9e000;
-	margin-top: 6rem;
-	padding: 6rem 2rem 0;
+	margin-top: 6em;
+	padding: 6em 2em 0;
 }
 
 /* display overwrites */
 .site-header .menu-scroll-down,
-.entry-header {
+.home .entry-header {
 	display: none;
+}
+
+/* - secondary pages/posts - */
+.entry-header .entry-title {
+	font-weight: 900;
+}
+
+.entry-meta {
+	color: #3f3f3f;
+	font-family: Raleway, sans-serif;
+	font-size: .9em;
+	font-weight: 300;
+	letter-spacing: 0;
+	margin: 1.5em 0 2em;
+	text-transform: none;
+}
+
+.entry-meta a {
+	color: #3f3f3f;
+}
+
+.entry-footer {
+	border-color: #f9e000;
+}
+
+.entry-footer .cat-links,
+.entry-footer .tags-links {
+	font-size: .875em;
+	font-weight: 400;
+	letter-spacing: 1.5px;
+
+}
+
+.entry-footer .cat-links .icon,
+.entry-footer .tags-links .icon {
+	top: 4px;
+}
+
+.site-footer .wrap {
+	max-width: 675px;
+	padding: 1.5em 0 2em;
+}
+
+@media screen and (min-width: 48em) {
+
+	.single-post .entry-title,
+	.page .entry-title {
+		font-size: 3em;
+		font-weight: 900;
+		line-height: 1.1;
+	}
+
+	.site-content {
+		padding-top: 6em;
+	}
+}
+
+@media screen and (max-width: 48em) {
+
+	.site-branding svg {
+		margin-left: -26px;
+	}
+
+	.entry-meta {
+		margin-bottom: 1rem;
+	}
 }
 /*# sourceMappingURL=style.css.map */
