@@ -229,6 +229,10 @@ input {
 	.site-content {
 		padding-top: 6em;
 	}
+
+	.home h2 {
+		font-size: 2em;
+	}
 }
 
 @media screen and (max-width: 48em) {
